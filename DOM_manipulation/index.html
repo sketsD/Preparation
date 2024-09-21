@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script async defer src="./script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1 class="title">Your Photo Archive</h1>
+        <!-- <label for="photoInput">Add your photo</label>
+        <input name="photoInput" type="text"> -->
+        <div class="overlay hidden"></div>
+        <div class="image-to-show-full-size modal hidden">
+            <button class="image-to-show-full-size--close btn-close-window">&#10006;</button>
+            <button class="slide-left slide-button" data-side="left">&#8672;</button>
+            <div class="slider">
+
+                <img class="slider-slide slide" src="./img/alexis-antoine-1tqpzFw1fS4-unsplash.jpg" alt="Users photo"
+                    data-current-id="0">
+
+                <div class="description-reveal">
+                    <div class="description-reveal--comment--block">
+                        <p class="description-reveal--comment">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Perferendis quis minus officia repudiandae quisquam recusandae assumenda molestias tenetur
+                            temporibus animi, consectetur aut explicabo libero labore eum facere modi optio ducimus!</p>
+                    </div>
+                    <div class="description-reveal--btns">
+                        <button class="description-reveal--delete description-reveal-btn">Delete photo</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="description-reveal--edit description-reveal-btn">Edit text</button> -->
+            <button class="slide-right slide-button" data-side="right" id="add-form">&#8674;</button>
+        </div>
+        <div class="grid__container">
+            <div class="form-add-photo modal hidden">
+                <button class="form-add-photo--close btn-close-window">&#10006;</button>
+                <form action="" class="form-add-photo--block" id="add-form">
+                    <h2 class="form-add-photo-header">Add description and your photo</h2>
+                    <label for="description" class="block-element-label photo-description--label">Description:<span
+                            class="user-hints">
+                            (up to 250 letters)</span></label>
+                    <textarea name="description" id="description"
+                        class="block-element-input photo-description-input input-textarea" rows="10" maxlength="250"
+                        placeholder="That was a wonderful trip"></textarea>
+                    <!-- <label for="photo" class="block-element-label photo-upload--label">Add your photo: <span
+                            class="user-hints">
+                            (Choose or drag your photo)</span></label> -->
+                    <label for="photo" class="block-element-label photo-upload--label">Add your photo: <span
+                            class="user-hints">
+                            (paste your URL)</span></label>
+                    <input type="url" name="photo" id="photo" class="block-element-input-url photo-upload--input">
+                    <!-- <input type="file" id="photo" name="photo" class="block-element-input photo-upload--input"
+                        accept="image/*">
+                    <div class="block-element-input--drag-area" name="photo-drag">
+                        &#43;
+                    </div> -->
+                    <button class="photo-upload--submit" type="submit">Submit</button>
+
+                </form>
+
+            </div>
+
+            <div class="images-box-element">
+                <!-- <div class="image-box">
+                    <h2 class="add-your-photo">Add your first photo</h2>
+                </div> -->
+                <!-- <div class="image-box">
+                    <button class="image-add-button">&#43;</button>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
