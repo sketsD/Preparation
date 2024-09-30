@@ -19,51 +19,47 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="headaer-block__container">
-                <nav class="navbar-block">
-                    <div class="logo"><img src="img/header/Logo.png" alt="Logo of the site Ziro" class="logo__img">
+            <div class="header__container">
+                <nav class="header__navbar">
+                    <div class="header__logo">
+                        <img src="imgs/Logo.png" alt="Logo of the site Ziro" class="header__logo-img">
                     </div>
-                    <ul class="nav__links">
-                        <li class="nav__link active">Home</li>
-                        <li class="nav__link">Pricing</li>
-                        <li class="nav__link">Blog</li>
-                        <li class="nav__link">Become a member</li>
-                        <li class="nav__link">About Us</li>
+                    <ul class="navbar__links">
+                        <li class="navbar__link active">Home</li>
+                        <li class="navbar__link">Pricing</li>
+                        <li class="navbar__link">Blog</li>
+                        <li class="navbar__link">Become a member</li>
+                        <li class="navbar__link">About Us</li>
                     </ul>
-                    <form action="" class="search__field">
-                        <input type="text" class="search_field__input" placeholder="Search here...">
-                        <button class="search__button">
-                            <svg class="search__svg" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    <form action="" class="navbar__search">
+                        <input type="text" class="navbar__search-input" placeholder="Search here...">
+                        <button class="navbar__search-button">
+                            <svg class="navbar__search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M5.94518 0.000189675C4.04141 0.00100344 2.25313 0.913405 1.13482 2.45435C0.0163926 3.99546 -0.29712 5.9788 0.291544 7.78957C0.880374 9.60054 2.29995 11.0202 4.11063 11.6086C5.92119 12.1968 7.90385 11.8825 9.44413 10.7632L12.4064 13.7265C12.6422 13.9623 12.986 14.0545 13.3081 13.9682C13.6303 13.8818 13.8818 13.6302 13.9682 13.3079C14.0544 12.9856 13.9624 12.6418 13.7266 12.4059L10.7643 9.44267C11.6295 8.25308 12.023 6.78489 11.8689 5.3219C11.7147 3.85891 11.0238 2.50513 9.92963 1.52208C8.83561 0.539036 7.41587 -0.00323536 5.9454 1.45234e-05L5.94518 0.000189675ZM5.94518 10.0332C4.86257 10.0332 3.82436 9.603 3.05884 8.83724C2.29333 8.07147 1.86331 7.03293 1.86331 5.94997C1.86331 4.86701 2.29333 3.82846 3.05884 3.0627C3.82436 2.29694 4.86257 1.86679 5.94518 1.86679C7.02779 1.86679 8.066 2.29694 8.83152 3.0627C9.59704 3.82846 10.027 4.86701 10.027 5.94997C10.0257 7.03243 9.59541 8.07035 8.83006 8.83578C8.06488 9.60138 7.02733 10.0319 5.94518 10.0332Z"
                                     fill="#FF5C00" />
                             </svg>
+
                         </button>
                     </form>
-                    <div>
-
-                        <a href="" class="log-link log-link__login">Login</a>
-                        /
-                        <a href="" class="log-link log-link__signup">Sign Up</a>
+                    <div class="navbar__auth-links">
+                        <a href="#" class="navbar__auth-link navbar__auth-link--login">Login</a> /
+                        <a href="#" class="navbar__auth-link navbar__auth-link--signup">Sign Up</a>
                     </div>
                 </nav>
-                <section class="main-block">
-
-                    <div class="title-block">
-                        <h1 class="title">Find out talented
-                            <span class="title title-orange">freelancer</span> with
-                            better review faster.
+                <section class="header__main">
+                    <div class="main__title">
+                        <h1 class="main__heading">Find out talented
+                            <span class="main__heading--orange">freelancer</span> with better review faster.
                         </h1>
-                        <p class="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        <div class="buttons-block">
-                            <button class="discover-button">Discover Now</button>
-                            <div class="demo-btn-box">
-                                <div class="on-play-bg" type="button">
-                                    <svg class='on-play-image' width="23" height="23" viewBox="0 0 23 23" fill="none"
+                        <p class="main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="main__buttons">
+                            <button class="main__button main__button--discover">Discover Now</button>
+                            <div class="main__demo">
+                                <div class="main__demo-play" type="button">
+                                    <svg class='main__demo-icon' width="23" height="23" viewBox="0 0 23 23" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M23 11.5C23 17.8513 17.8513 23 11.5 23C5.14873 23 0 17.8513 0 11.5C0 5.14873 5.14873 0 11.5 0C17.8513 0 23 5.14873 23 11.5ZM1.85424 11.5C1.85424 16.8272 6.17279 21.1458 11.5 21.1458C16.8272 21.1458 21.1458 16.8272 21.1458 11.5C21.1458 6.17279 16.8272 1.85424 11.5 1.85424C6.17279 1.85424 1.85424 6.17279 1.85424 11.5Z"
@@ -73,65 +69,72 @@
                                     </svg>
 
                                 </div>
-                                <a href="" class="demo-button">Watch Demo</a>
+                                <a href="#" class="main__demo-button">Watch Demo</a>
                             </div>
-
                         </div>
                     </div>
-                    <div class="image-block">
-                        <img src="./img/header/coverHeader.png" alt="">
+                    <div class="main__image">
+                        <img class="main__image-img" src="./imgs/header/cover-Header.png" alt="Header banner image">
                     </div>
                 </section>
             </div>
         </header>
+
         <main class="page">
-            <section class="partners-block__container">
-                <div class="partners-block-items">
-                    <div class="partners-block__item">
-                        <img src="./img/main/partners/image1.png" alt="" class="item-img">
-                    </div>
-                    <div class="partners-block__item">
-                        <img src="./img/main/partners/image3.png" alt="" class="item-img">
-                    </div>
-                    <div class="partners-block__item">
-                        <img src="./img/main/partners/image4.png" alt="" class="item-img">
-                    </div>
-                    <div class="partners-block__item">
-                        <img src="./img/main/partners/image2.png" alt="" class="item-img">
-                    </div>
-                    <div class="partners-block__item">
-                        <img src="./img/main/partners/image5.png" alt="" class="item-img">
-                    </div>
-                    <div class="partners-block__item">
-                        <img src="./img/main/partners/image6.png" alt="" class="item-img">
+            <section class="partners">
+                <div class="partners__container">
+                    <div class="partners__items">
+                        <div class="partners__item">
+                            <img src="./imgs/main/partners/partner-designStudio.png" alt="Partner logo 1"
+                                class="partners__item-img">
+                        </div>
+                        <div class="partners__item">
+                            <img src="./imgs/main/partners/partner-Design.png" alt="Partner logo 2"
+                                class="partners__item-img">
+                        </div>
+                        <div class="partners__item">
+                            <img src="./imgs/main/partners/partner-Green.png" alt="Partner logo 3"
+                                class="partners__item-img">
+                        </div>
+                        <div class="partners__item">
+                            <img src="./imgs/main/partners/partner-Natural.png" alt="Partner logo 4"
+                                class="partners__item-img">
+                        </div>
+                        <div class="partners__item">
+                            <img src="./imgs/main/partners/partner-Nature.png" alt="Partner logo 5"
+                                class="partners__item-img">
+                        </div>
+                        <div class="partners__item">
+                            <img src="./imgs/main/partners/partner-yourCompany.png" alt="Partner logo 6"
+                                class="partners__item-img">
+                        </div>
                     </div>
                 </div>
-
             </section>
-            <section class="how-it-works-block__container">
-                <div class="how-it-works-block">
-                    <p class="how-it-works-block__subtitle">How it works</p>
-                    <div class="how-it-works-block__sides">
 
-                        <div class="how-it-works-block__expand-box">
-                            <h2 class="how-it-works-block__title section-title">Start find a job you love
-                                with us easily</h2>
-                            <ol class="how-it-works-block__items">
-                                <li class="how-it-works-block__item active">
-                                    <div class="how-it-works-block__item--container ">
+            <section class="how-it-works">
+                <div class="how-it-works__container">
+                    <p class="how-it-works__subtitle">How it works</p>
+                    <div class="how-it-works__sides">
 
-                                        <div class="how-it-works-block__item--block ">
-                                            <div class="how-it-works-block__item--num item-1">
+                        <div class="how-it-works__expand-box">
+                            <h2 class="how-it-works__title section-title">Start find a job you love with us easily
+                            </h2>
+                            <ol class="how-it-works__items">
+                                <li class="how-it-works__item active">
+                                    <div class="how-it-works__item-container">
+                                        <div class="how-it-works__item-block">
+                                            <div class="how-it-works__item-num item-1">
                                                 <p>1</p>
                                             </div>
-                                            <h3 class="how-it-works-block__item--titile">Search Vacancies</h3>
+                                            <h3 class="how-it-works__item-title">Start find a job you love
+                                                with us easily</h3>
                                         </div>
-                                        <div class="how-it-works-block__item--arrow">
+                                        <div class="how-it-works__item-arrow">
                                             <div class="arrow-img"></div>
                                         </div>
                                     </div>
-
-                                    <p class="how-it-works-block__item--text ">
+                                    <p class="how-it-works__item-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                         nostrud
@@ -139,22 +142,19 @@
                                     </p>
                                 </li>
 
-
-                                <li class="how-it-works-block__item ">
-                                    <div class="how-it-works-block__item--container ">
-
-                                        <div class="how-it-works-block__item--block ">
-                                            <div class="how-it-works-block__item--num item-2">
+                                <li class="how-it-works__item">
+                                    <div class="how-it-works__item-container">
+                                        <div class="how-it-works__item-block">
+                                            <div class="how-it-works__item-num item-2">
                                                 <p>2</p>
                                             </div>
-                                            <h3 class="how-it-works-block__item--titile">Search Vacancies</h3>
+                                            <h3 class="how-it-works__item-title">Search Vacancies</h3>
                                         </div>
-                                        <div class="how-it-works-block__item--arrow">
+                                        <div class="how-it-works__item-arrow">
                                             <div class="arrow-img"></div>
                                         </div>
                                     </div>
-
-                                    <p class="how-it-works-block__item--text ">
+                                    <p class="how-it-works__item-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                         nostrud
@@ -162,21 +162,19 @@
                                     </p>
                                 </li>
 
-                                <li class="how-it-works-block__item ">
-                                    <div class="how-it-works-block__item--container ">
-
-                                        <div class="how-it-works-block__item--block ">
-                                            <div class="how-it-works-block__item--num item-3">
+                                <li class="how-it-works__item">
+                                    <div class="how-it-works__item-container">
+                                        <div class="how-it-works__item-block">
+                                            <div class="how-it-works__item-num item-3">
                                                 <p>3</p>
                                             </div>
-                                            <h3 class="how-it-works-block__item--titile">Apply Job</h3>
+                                            <h3 class="how-it-works__item-title">Apply Job</h3>
                                         </div>
-                                        <div class="how-it-works-block__item--arrow ">
+                                        <div class="how-it-works__item-arrow">
                                             <div class="arrow-img"></div>
                                         </div>
                                     </div>
-
-                                    <p class="how-it-works-block__item--text ">
+                                    <p class="how-it-works__item-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                         nostrud
@@ -185,27 +183,28 @@
                                 </li>
                             </ol>
                         </div>
-                        <div class="how-it-works-block__video-box">
-                            <video width="700" height="500" controls poster="./img/header/videoCover.png">
-                                <source src="https://www.youtube.com/watch?v=mix9YfaaNa0" type="video/mp4">
 
+                        <div class="how-it-works__video-box">
+                            <video width="700" height="500" controls poster="./imgs/main/video-Cover.png">
+                                <source src="https://www.youtube.com/" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="whywe__container">
-                <div class="whywe-block block">
 
-                    <h2 class="whywe-block__title section-title ">Why Choose Us</h2>
-                    <p class="whywe-block__title section-text">Lorem ipsum dolor sit amet, consectetur
+            <section class="why-choose-us__container">
+                <div class="why-choose-us__block block">
+
+                    <h2 class="why-choose-us__title section-title">Why Choose Us</h2>
+                    <p class="why-choose-us__subtitle section-text">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna.</p>
 
-                    <div class="whywe-block__items-container items-container">
-                        <div class="whywe-block__item block__item">
-                            <div class="whywe-block__item--bg item--bg-1">
+                    <div class="why-choose-us__items-container items-container">
+                        <div class="why-choose-us__item block__item">
+                            <div class="why-choose-us__item-bg item-bg-1">
                                 <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -214,34 +213,34 @@
                                 </svg>
 
                             </div>
-                            <h3 class="whywe-block__item--title item--title">Trusted</h3>
+                            <h3 class="why-choose-us__item-title item--title">Trusted</h3>
                             <p class="whywe-block__item--text item--text">Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
                         </div>
-                        <div class="whywe-block__item block__item">
-                            <div class="whywe-block__item--bg item--bg-2"><svg width="37" height="37"
+                        <div class="why-choose-us__item block__item">
+                            <div class="why-choose-us__item-bg item-bg-2"><svg width="37" height="37"
                                     viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M18.35 0C8.18692 0 0 8.18692 0 18.35C0 28.5131 8.18692 36.7 18.35 36.7C28.5131 36.7 36.7 28.5131 36.7 18.35C36.7 8.18692 28.5131 0 18.35 0ZM8.46923 9.88077C8.46923 9.03385 9.03385 8.46923 9.88077 8.46923C10.7277 8.46923 11.2923 9.03385 11.2923 9.88077C11.2923 10.7277 10.7277 11.2923 9.88077 11.2923C9.03385 11.2923 8.46923 10.7277 8.46923 9.88077ZM18.4912 25.5488L10.7277 27.6662C9.73962 27.9485 8.75154 26.9604 9.03385 25.9723L11.1512 18.2088C12.1392 14.8212 14.68 12.1392 18.0677 11.2923L25.8312 9.175C26.8192 8.89269 27.8073 9.88077 27.525 10.8688L25.4077 18.6323C24.5608 21.8788 21.8788 24.5608 18.4912 25.5488ZM26.8192 28.2308C25.9723 28.2308 25.4077 27.6662 25.4077 26.8192C25.4077 25.9723 25.9723 25.4077 26.8192 25.4077C27.6662 25.4077 28.2308 25.9723 28.2308 26.8192C28.2308 27.6662 27.6662 28.2308 26.8192 28.2308Z"
                                         fill="white" />
                                 </svg>
                             </div>
-                            <h3 class="whywe-block__item--title item--title">Easy to Use</h3>
-                            <p class="whywe-block__item--text item--text">Lorem ipsum dolor sit amet, consectetur
+                            <h3 class="why-choose-us__item-title item--title">Easy to Use</h3>
+                            <p class="why-choose-us__item-text item--text">Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
                         </div>
-                        <div class="whywe-block__item block__item">
-                            <div class="whywe-block__item--bg item--bg-3"><svg width="37" height="37"
+                        <div class="why-choose-us__item block__item">
+                            <div class="why-choose-us__item-bg item-bg-3"><svg width="37" height="37"
                                     viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M18.35 0C8.18692 0 0 8.18692 0 18.35C0 28.5131 8.18692 36.7 18.35 36.7C28.5131 36.7 36.7 28.5131 36.7 18.35C36.7 8.18692 28.5131 0 18.35 0ZM8.46923 9.88077C8.46923 9.03385 9.03385 8.46923 9.88077 8.46923C10.7277 8.46923 11.2923 9.03385 11.2923 9.88077C11.2923 10.7277 10.7277 11.2923 9.88077 11.2923C9.03385 11.2923 8.46923 10.7277 8.46923 9.88077ZM18.4912 25.5488L10.7277 27.6662C9.73962 27.9485 8.75154 26.9604 9.03385 25.9723L11.1512 18.2088C12.1392 14.8212 14.68 12.1392 18.0677 11.2923L25.8312 9.175C26.8192 8.89269 27.8073 9.88077 27.525 10.8688L25.4077 18.6323C24.5608 21.8788 21.8788 24.5608 18.4912 25.5488ZM26.8192 28.2308C25.9723 28.2308 25.4077 27.6662 25.4077 26.8192C25.4077 25.9723 25.9723 25.4077 26.8192 25.4077C27.6662 25.4077 28.2308 25.9723 28.2308 26.8192C28.2308 27.6662 27.6662 28.2308 26.8192 28.2308Z"
                                         fill="white" />
                                 </svg>
                             </div>
-                            <h3 class="whywe-block__item--title item--title">Faster</h3>
-                            <p class="whywe-block__item--text item--text">Lorem ipsum dolor sit amet, consectetur
+                            <h3 class="why-choose-us__item-title item--title">Faster</h3>
+                            <p class="why-choose-us__item-text item--text">Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
                         </div>
@@ -251,17 +250,17 @@
 
             <section class="features__container">
 
-                <div class="features-block block">
+                <div class="features__block block">
 
-                    <h2 class="features-block__title section-title ">Featured Jobs</h2>
-                    <p class="features-block__title section-text">Lorem ipsum dolor sit amet, consectetur
+                    <h2 class="features__title section-title ">Featured Jobs</h2>
+                    <p class="features__text section-text">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna.</p>
 
                     <div class="features-block__items-container items-container">
 
-                        <div class="features-block__item-navigation block__item-navigation">
-                            <button class="features-block__item--btn block__item--btn btn-right">
+                        <div class="items-container__navigation navigation">
+                            <button class="features-block__button navigation__button navigation__button--right">
                                 <svg width="32" height="27" viewBox="0 0 32 27" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -273,7 +272,7 @@
                                 </svg>
 
                             </button>
-                            <button class="features-block__item--btn block__item--btn btn-left">
+                            <button class="features-block__button navigation__button navigation__button--left">
                                 <svg width="32" height="27" viewBox="0 0 32 27" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -284,27 +283,26 @@
                                         fill="#EF6010" />
                                 </svg>
                             </button>
-
                         </div>
 
                         <div class="features-block__item block__item">
-                            <div class="features-block__item-img--wrap">
-                                <img class="features-block__item-img--wrap-img" src="./img/main/whywe/avatar1.jpg"
-                                    alt="" class="features-block__item-img">
+                            <div class="features-block__item-image--wrapper">
+                                <img class="features-block__item-image" src="./imgs/main/why-choose-us/user-avatar.jpg"
+                                    alt="user avatar" class="features-block__item-img">
                             </div>
-                            <button class="features-block__item--expand"><svg width="23" height="5" viewBox="0 0 23 5"
+                            <button class="features-block__item-expand"><svg width="23" height="5" viewBox="0 0 23 5"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M2.24 0.500255C1.64592 0.500255 1.07608 0.73619 0.65608 1.15633C0.23592 1.57633 0 2.14617 0 2.74025C0 3.33433 0.235936 3.90417 0.65608 4.32417C1.07608 4.74433 1.64592 4.98025 2.24 4.98025C2.83408 4.98025 3.40392 4.74432 3.82392 4.32417C4.24408 3.90417 4.48 3.33433 4.48 2.74025C4.48 2.14617 4.24406 1.57633 3.82392 1.15633C3.40392 0.736174 2.83408 0.500255 2.24 0.500255ZM11.2 0.500255C10.6059 0.500255 10.0361 0.73619 9.61608 1.15633C9.19592 1.57633 8.96 2.14617 8.96 2.74025C8.96 3.33433 9.19593 3.90417 9.61608 4.32417C10.0361 4.74433 10.6059 4.98025 11.2 4.98025C11.7941 4.98025 12.3639 4.74432 12.7839 4.32417C13.2041 3.90417 13.44 3.33433 13.44 2.74025C13.44 2.14353 13.202 1.57149 12.7786 1.15105C12.3553 0.730575 11.7817 0.496375 11.185 0.500255H11.2ZM20.16 0.500255C19.5659 0.500255 18.9961 0.73619 18.5761 1.15633C18.1559 1.57633 17.92 2.14617 17.92 2.74025C17.92 3.33433 18.1559 3.90417 18.5761 4.32417C18.9961 4.74433 19.5659 4.98025 20.16 4.98025C20.7541 4.98025 21.3239 4.74432 21.7439 4.32417C22.1641 3.90417 22.4 3.33433 22.4 2.74025C22.4 2.14025 22.1595 1.56541 21.732 1.14433C21.3047 0.723255 20.7262 0.491215 20.1264 0.500255H20.16Z"
                                         fill="#332D2D" />
                                 </svg>
                             </button>
-                            <h3 class="features-block__item--job">Database Programmer</h3>
-                            <p class="features-block__item--name">Marraz Team</p>
+                            <h3 class="features-block__item-job">Database Programmer</h3>
+                            <p class="features-block__item-name">Marraz Team</p>
 
-                            <div class="features-block__item--info-block">
+                            <div class="features-block__item-info">
 
-                                <p class="features-block__item--salary">
+                                <p class="features-block__item-salary">
                                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -316,9 +314,9 @@
                                     </svg>
                                     $14,000 - $25,000 <span>/monthly</span>
                                 </p>
-                                <div class="features-block__item--location-location-block">
+                                <div class="features-block__item-location">
 
-                                    <address class="features-block__item--location">
+                                    <address class="features-block__item-location">
                                         <svg width="13" height="18" viewBox="0 0 13 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -328,10 +326,10 @@
 
                                         London, England
                                     </address>
-                                    <a href="" class="features-block__item-link">View map</a>
+                                    <a href="#" class="features-block__item-location-link">View map</a>
                                 </div>
                             </div>
-                            <div class="features-block__item--btns-block">
+                            <div class="features-block__item-btns-block">
                                 <button class="features-block__item--like-btn"><svg width="24" height="22"
                                         viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -346,23 +344,23 @@
 
 
                         <div class="features-block__item block__item">
-                            <div class="features-block__item-img--wrap">
-                                <img class="features-block__item-img--wrap-img" src="./img/main/whywe/avatar1.jpg"
-                                    alt="" class="features-block__item-img">
+                            <div class="features-block__item-image--wrapper">
+                                <img class="features-block__item-image" src="./imgs/main/why-choose-us/user-avatar.jpg"
+                                    alt="User avatar" class="features-block__item-img">
                             </div>
-                            <button class="features-block__item--expand"><svg width="23" height="5" viewBox="0 0 23 5"
+                            <button class="features-block__item-expand"><svg width="23" height="5" viewBox="0 0 23 5"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M2.24 0.500255C1.64592 0.500255 1.07608 0.73619 0.65608 1.15633C0.23592 1.57633 0 2.14617 0 2.74025C0 3.33433 0.235936 3.90417 0.65608 4.32417C1.07608 4.74433 1.64592 4.98025 2.24 4.98025C2.83408 4.98025 3.40392 4.74432 3.82392 4.32417C4.24408 3.90417 4.48 3.33433 4.48 2.74025C4.48 2.14617 4.24406 1.57633 3.82392 1.15633C3.40392 0.736174 2.83408 0.500255 2.24 0.500255ZM11.2 0.500255C10.6059 0.500255 10.0361 0.73619 9.61608 1.15633C9.19592 1.57633 8.96 2.14617 8.96 2.74025C8.96 3.33433 9.19593 3.90417 9.61608 4.32417C10.0361 4.74433 10.6059 4.98025 11.2 4.98025C11.7941 4.98025 12.3639 4.74432 12.7839 4.32417C13.2041 3.90417 13.44 3.33433 13.44 2.74025C13.44 2.14353 13.202 1.57149 12.7786 1.15105C12.3553 0.730575 11.7817 0.496375 11.185 0.500255H11.2ZM20.16 0.500255C19.5659 0.500255 18.9961 0.73619 18.5761 1.15633C18.1559 1.57633 17.92 2.14617 17.92 2.74025C17.92 3.33433 18.1559 3.90417 18.5761 4.32417C18.9961 4.74433 19.5659 4.98025 20.16 4.98025C20.7541 4.98025 21.3239 4.74432 21.7439 4.32417C22.1641 3.90417 22.4 3.33433 22.4 2.74025C22.4 2.14025 22.1595 1.56541 21.732 1.14433C21.3047 0.723255 20.7262 0.491215 20.1264 0.500255H20.16Z"
                                         fill="#332D2D" />
                                 </svg>
                             </button>
-                            <h3 class="features-block__item--job">Database Programmer</h3>
-                            <p class="features-block__item--name">Marraz Team</p>
+                            <h3 class="features-block__item-job">Database Programmer</h3>
+                            <p class="features-block__item-name">Marraz Team</p>
 
-                            <div class="features-block__item--info-block">
+                            <div class="features-block__item-info">
 
-                                <p class="features-block__item--salary">
+                                <p class="features-block__item-salary">
                                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -374,9 +372,9 @@
                                     </svg>
                                     $14,000 - $25,000 <span>/monthly</span>
                                 </p>
-                                <div class="features-block__item--location-location-block">
+                                <div class="features-block__item-location">
 
-                                    <address class="features-block__item--location">
+                                    <address class="features-block__item-location">
                                         <svg width="13" height="18" viewBox="0 0 13 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -386,10 +384,10 @@
 
                                         London, England
                                     </address>
-                                    <a href="" class="features-block__item-link">View map</a>
+                                    <a href="#" class="features-block__item-location-link">View map</a>
                                 </div>
                             </div>
-                            <div class="features-block__item--btns-block">
+                            <div class="features-block__item-btns-block">
                                 <button class="features-block__item--like-btn"><svg width="24" height="22"
                                         viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -400,29 +398,24 @@
                                 <button class="features-block__item--apply-btn btn-main-purple">Apply Now</button>
                             </div>
                         </div>
-
-
-
-
-
                         <div class="features-block__item block__item">
-                            <div class="features-block__item-img--wrap">
-                                <img class="features-block__item-img--wrap-img" src="./img/main/whywe/avatar1.jpg"
-                                    alt="" class="features-block__item-img">
+                            <div class="features-block__item-image--wrapper">
+                                <img class="features-block__item-image" src="./imgs/main/why-choose-us/user-avatar.jpg"
+                                    alt="User avatar" class="features-block__item-img">
                             </div>
-                            <button class="features-block__item--expand"><svg width="23" height="5" viewBox="0 0 23 5"
+                            <button class="features-block__item-expand"><svg width="23" height="5" viewBox="0 0 23 5"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M2.24 0.500255C1.64592 0.500255 1.07608 0.73619 0.65608 1.15633C0.23592 1.57633 0 2.14617 0 2.74025C0 3.33433 0.235936 3.90417 0.65608 4.32417C1.07608 4.74433 1.64592 4.98025 2.24 4.98025C2.83408 4.98025 3.40392 4.74432 3.82392 4.32417C4.24408 3.90417 4.48 3.33433 4.48 2.74025C4.48 2.14617 4.24406 1.57633 3.82392 1.15633C3.40392 0.736174 2.83408 0.500255 2.24 0.500255ZM11.2 0.500255C10.6059 0.500255 10.0361 0.73619 9.61608 1.15633C9.19592 1.57633 8.96 2.14617 8.96 2.74025C8.96 3.33433 9.19593 3.90417 9.61608 4.32417C10.0361 4.74433 10.6059 4.98025 11.2 4.98025C11.7941 4.98025 12.3639 4.74432 12.7839 4.32417C13.2041 3.90417 13.44 3.33433 13.44 2.74025C13.44 2.14353 13.202 1.57149 12.7786 1.15105C12.3553 0.730575 11.7817 0.496375 11.185 0.500255H11.2ZM20.16 0.500255C19.5659 0.500255 18.9961 0.73619 18.5761 1.15633C18.1559 1.57633 17.92 2.14617 17.92 2.74025C17.92 3.33433 18.1559 3.90417 18.5761 4.32417C18.9961 4.74433 19.5659 4.98025 20.16 4.98025C20.7541 4.98025 21.3239 4.74432 21.7439 4.32417C22.1641 3.90417 22.4 3.33433 22.4 2.74025C22.4 2.14025 22.1595 1.56541 21.732 1.14433C21.3047 0.723255 20.7262 0.491215 20.1264 0.500255H20.16Z"
                                         fill="#332D2D" />
                                 </svg>
                             </button>
-                            <h3 class="features-block__item--job">Database Programmer</h3>
-                            <p class="features-block__item--name">Marraz Team</p>
+                            <h3 class="features-block__item-job">Database Programmer</h3>
+                            <p class="features-block__item-name">Marraz Team</p>
 
-                            <div class="features-block__item--info-block">
+                            <div class="features-block__item-info">
 
-                                <p class="features-block__item--salary">
+                                <p class="features-block__item-salary">
                                     <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -434,9 +427,9 @@
                                     </svg>
                                     $14,000 - $25,000 <span>/monthly</span>
                                 </p>
-                                <div class="features-block__item--location-location-block">
+                                <div class="features-block__item-location">
 
-                                    <address class="features-block__item--location">
+                                    <address class="features-block__item-location">
                                         <svg width="13" height="18" viewBox="0 0 13 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -446,13 +439,12 @@
 
                                         London, England
                                     </address>
-                                    <a href="" class="features-block__item-link">View map</a>
+                                    <a href="#" class="features-block__item-location-link">View map</a>
                                 </div>
                             </div>
-                            <div class="features-block__item--btns-block">
-                                <button class="features-block__item--like-btn">
-                                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                            <div class="features-block__item-btns-block">
+                                <button class="features-block__item--like-btn"><svg width="24" height="22"
+                                        viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M1.6996 1.83963C-0.567639 4.29254 -0.565429 8.23975 1.6996 10.6948L11.7332 21.5754C15.0816 17.9528 18.4302 14.33 21.7788 10.7072C24.046 8.25431 24.046 4.30483 21.7788 1.85209C19.5115 -0.600819 15.8608 -0.601046 13.5939 1.85209L11.7452 3.85219L9.88498 1.83968C7.61774 -0.613227 3.96701 -0.613227 1.70011 1.83968L1.6996 1.83963Z"
                                             fill="#FF5C00" />
@@ -461,7 +453,6 @@
                                 <button class="features-block__item--apply-btn btn-main-purple">Apply Now</button>
                             </div>
                         </div>
-
 
 
 
@@ -472,7 +463,6 @@
             </section>
 
 
-
             <section class="customers__container">
                 <div class="customers-block block">
                     <h2 class="customers-block__title section-title ">What Our Customer Says</h2>
@@ -481,22 +471,22 @@
                         incididunt ut labore et dolore magna.</p>
 
                     <div class="customers-block__items-container items-container">
-                        <div class="customers-block__items-block-avatar">
-                            <div class="customers-block__items-block-avatar--bg">
-                                <div class="customers-block__items-block-avatar-container"></div>
-                                <div class="customers-block__items-block-avatar-icon-1"></div>
-                                <div class="customers-block__items-block-avatar-icon-2"></div>
+                        <div class="customers-block__avatar">
+                            <div class="customers-avatar--bg">
+                                <div class="customers-avatar--container"></div>
+                                <div class="customers-avatar--icon-1"></div>
+                                <div class="customers-avatar--icon-2"></div>
                             </div>
                         </div>
-                        <div class="customers-block__items-block-feedback">
-                            <div class="customers-block__items-cover">
+                        <div class="customers-block__feedback">
+                            <div class="customers-block__feedback--wrapper">
 
-                                <div class="customers-block__items-block-customer-block customer--slider slider">
-                                    <div class="customer--slide slide">
+                                <div class="customers-block__feedback__slider slider">
+                                    <div class="customer__slide slide">
 
-                                        <h3 class="customers-block__items-block-customer-name">William Smith</h3>
-                                        <p class="customers-block__items-block-customer-job">CEO OF THE Ship&Go</p>
-                                        <blockquote class="customers-block__items-block-customer-feedback">“Lorem ipsum
+                                        <h3 class="customer-name">William Smith</h3>
+                                        <p class="customer-job">CEO OF THE Ship&Go</p>
+                                        <blockquote class="customer-feedback">“Lorem ipsum
                                             dolor
                                             sit amet,
                                             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -512,25 +502,11 @@
                                             nostrud
                                             exercitation ullamco laboris nisi ut aliquip.”</blockquote>
                                     </div>
+                                    <div class="customer__slide slide">
 
-                                    <div class="customer--slide slide">
-
-                                        <h3 class="customers-block__items-block-customer-name">Vitalik Oleg</h3>
-                                        <p class="customers-block__items-block-customer-job">CEO OF THE LOVE STUDENTS
-                                        </p>
-                                        <blockquote class="customers-block__items-block-customer-feedback">Lorem ipsum
-                                            dolor
-                                            sit amet consectetur adipisicing elit. Ducimus aliquam optio rerum quia, hic
-                                            temporibus nam id quaerat ratione accusamus reprehenderit minus cupiditate
-                                            nisi,
-                                            ut deserunt enim vitae doloribus tenetur.</blockquote>
-                                    </div>
-
-                                    <div class="customer--slide slide">
-
-                                        <h3 class="customers-block__items-block-customer-name">Onufrii Smithenko</h3>
-                                        <p class="customers-block__items-block-customer-job">Director</p>
-                                        <blockquote class="customers-block__items-block-customer-feedback">“Lorem ipsum
+                                        <h3 class="customer-name">Vitalik Oleg</h3>
+                                        <p class="customer-job">CEO OF THE LOVE STUDENTS</p>
+                                        <blockquote class="customer-feedback">“Lorem ipsum
                                             dolor
                                             sit amet,
                                             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -539,18 +515,26 @@
                                             aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris
                                             nisi
                                             ut
-                                            aliquip.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                            eiusmod
-                                            tempor
-                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis
-                                            nostrud
-                                            exercitation ullamco laboris nisi ut aliquip.”</blockquote>
+                                            aliquip.
+                                            ”</blockquote>
                                     </div>
+
+                                    <div class="customer__slide slide">
+
+                                        <h3 class="customer-name">Onufrii Smithenko</h3>
+                                        <p class="customer-job">Director</p>
+                                        <blockquote class="customer-feedback">“Lorem, ipsum dolor sit amet consectetur
+                                            adipisicing elit. Excepturi, a earum? Rem, tenetur eligendi nihil quaerat
+                                            similique molestias error vero, inventore unde at pariatur quod commodi qui
+                                            in, ipsum temporibus.
+                                            ”</blockquote>
+                                    </div>
+
+
                                 </div>
                             </div>
-                            <div class="customers-block__item-navigation block__item-navigation">
-                                <button
-                                    class="customers-block__item--btn-right block__item--btn btn-right slider__btn--right">
+                            <div class="customers-navigation navigation">
+                                <button class="customers-navigation-right navigation__button navigation__button--right">
                                     <svg width="32" height="27" viewBox="0 0 32 27" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -562,8 +546,7 @@
                                     </svg>
 
                                 </button>
-                                <button
-                                    class="customers-block__item--btn-left block__item--btn btn-left slider__btn--left">
+                                <button class="customers-navigation-left navigation__button navigation__button--left">
                                     <svg width="32" height="27" viewBox="0 0 32 27" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -581,22 +564,22 @@
 
                 </div>
 
-                <div class="customers-block__counter">
-                    <div class="customers-block__counter-box">
-                        <p class="customers-block__counter-box--num">36,789</p>
-                        <p class="customers-block__counter-box--text">Talented Freelancer</p>
+                <div class="customers__counter">
+                    <div class="customers__counter-box">
+                        <p class="customers__counter-box--num">36,789</p>
+                        <p class="customers__counter-box--text">Talented Freelancer</p>
                     </div>
-                    <div class="customers-block__counter-box">
-                        <p class="customers-block__counter-box--num">45,973</p>
-                        <p class="customers-block__counter-box--text">Visitors</p>
+                    <div class="customers__counter-box">
+                        <p class="customers__counter-box--num">45,973</p>
+                        <p class="customers__counter-box--text">Visitors</p>
                     </div>
-                    <div class="customers-block__counter-box">
-                        <p class="customers-block__counter-box--num">56,461</p>
-                        <p class="customers-block__counter-box--text">Contract Made</p>
+                    <div class="customers__counter-box">
+                        <p class="customers__counter-box--num">56,461</p>
+                        <p class="customers__counter-box--text">Contract Made</p>
                     </div>
-                    <div class="customers-block__counter-box">
-                        <p class="customers-block__counter-box--num">852k</p>
-                        <p class="customers-block__counter-box--text">Companies</p>
+                    <div class="customers__counter-box">
+                        <p class="customers__counter-box--num">852k</p>
+                        <p class="customers__counter-box--text">Companies</p>
                     </div>
                 </div>
             </section>
@@ -608,45 +591,45 @@
                 <div class="pricing-block block">
 
                     <h2 class="pricing-block__title section-title ">Pricing Plan</h2>
-                    <p class="pricing-block__title section-text">Lorem ipsum dolor sit amet, consectetur
+                    <p class="pricing-block__text section-text">Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna.</p>
 
-                    <div class="pricing-block__items-container items-container">
-                        <div class="pricing-block__item block__item">
-                            <h3 class="pricing-block__item--title item--title">FREE</h3>
-                            <p class="pricing-block__item-price">$0</p>
-                            <p class="pricing-block__item-mothly">Per month</p>
-                            <ul class="pricing-block__item-conditions">
-                                <li class="pricing-block__item-condition">Lorem ipsum dolor sit amet.</li>
-                                <li class="pricing-block__item-condition">Lorem ipsum dolor sit amet.</li>
-                                <li class="pricing-block__item-condition">Sed do eiusmod tempor</li>
+                    <div class="pricing-plan-container items-container">
+                        <div class="pricing-plan block__item">
+                            <h3 class="pricing-plan__title item--title">FREE</h3>
+                            <p class="pricing-plan__price">$0</p>
+                            <p class="pricing-plan__monthly">Per month</p>
+                            <ul class="pricing-plan__conditions">
+                                <li class="pricing-plan__conditions--item">Lorem ipsum dolor sit amet.</li>
+                                <li class="pricing-plan__conditions--item">Lorem ipsum dolor sit amet.</li>
+                                <li class="pricing-plan__conditions--item">Sed do eiusmod tempor</li>
                             </ul>
-                            <button class="pricing-block__item-button btn-main-purple">Purchase Now</button>
+                            <button class="pricing-plan__button btn-main-purple">Purchase Now</button>
 
                         </div>
-                        <div class="pricing-block__item block__item">
-                            <h3 class="pricing-block__item--title item--title">PREMIUM</h3>
-                            <p class="pricing-block__item-price">$175</p>
-                            <p class="pricing-block__item-mothly">Per month</p>
-                            <ul class="pricing-block__item-conditions">
-                                <li class="pricing-block__item-condition">Lorem ipsum dolor sit amet.</li>
-                                <li class="pricing-block__item-condition">Lorem ipsum dolor sit amet.</li>
-                                <li class="pricing-block__item-condition">Sed do eiusmod tempor</li>
+                        <div class="pricing-plan block__item">
+                            <h3 class="pricing-plan__title item--title">PREMIUM</h3>
+                            <p class="pricing-plan__price">$175</p>
+                            <p class="pricing-plan__monthly">Per month</p>
+                            <ul class="pricing-plan__conditions">
+                                <li class="pricing-plan__conditions--item">Lorem ipsum dolor sit amet.</li>
+                                <li class="pricing-plan__conditions--item">Lorem ipsum dolor sit amet.</li>
+                                <li class="pricing-plan__conditions--item">Sed do eiusmod tempor</li>
                             </ul>
-                            <button class="pricing-block__item-button btn-main-purple">Purchase Now</button>
+                            <button class="pricing-plan__button btn-main-purple">Purchase Now</button>
 
                         </div>
-                        <div class="pricing-block__item block__item">
-                            <h3 class="pricing-block__item--title item--title">PLATNIUM</h3>
-                            <p class="pricing-block__item-price">$500</p>
-                            <p class="pricing-block__item-mothly">Per month</p>
-                            <ul class="pricing-block__item-conditions">
-                                <li class="pricing-block__item-condition">Lorem ipsum dolor sit amet.</li>
-                                <li class="pricing-block__item-condition">Lorem ipsum dolor sit amet.</li>
-                                <li class="pricing-block__item-condition">Sed do eiusmod tempor</li>
+                        <div class="pricing-plan block__item">
+                            <h3 class="pricing-plan__title item--title">PLATNIUM</h3>
+                            <p class="pricing-plan__price">$500</p>
+                            <p class="pricing-plan__monthly">Per month</p>
+                            <ul class="pricing-plan__conditions">
+                                <li class="pricing-plan__conditions--item">Lorem ipsum dolor sit amet.</li>
+                                <li class="pricing-plan__conditions--item">Lorem ipsum dolor sit amet.</li>
+                                <li class="pricing-plan__conditions--item">Sed do eiusmod tempor</li>
                             </ul>
-                            <button class="pricing-block__item-button btn-main-purple">Purchase Now</button>
+                            <button class="pricing-plan__button btn-main-purple">Purchase Now</button>
 
                         </div>
 
@@ -659,86 +642,86 @@
 
                 <div class="footer-block__list-grid">
 
-                    <div class="footer-block__list">
-                        <h3 class="footer-block__list--title">Olearn</h3>
-                        <ul class="footer-block__list--ul">
-                            <li class="footer-block__list--li"><a href="">About</a></li>
-                            <li class="footer-block__list--li"><a href="">What we offer</a></li>
-                            <li class="footer-block__list--li"><a href="">Leadership</a></li>
-                            <li class="footer-block__list--li"><a href="">Careers</a></li>
+                    <div class="footer__list">
+                        <h3 class="footer__list--title">Olearn</h3>
+                        <ul class="footer__list--ul">
+                            <li class="footer__list-item"><a href="#">About</a></li>
+                            <li class="footer__list-item"><a href="#">What we offer</a></li>
+                            <li class="footer__list-item"><a href="#">Leadership</a></li>
+                            <li class="footer__list-item"><a href="#">Careers</a></li>
                         </ul>
                     </div>
-                    <div class="footer-block__list">
-                        <h3 class="footer-block__list--title">Olearn</h3>
-                        <ul class="footer-block__list--ul">
-                            <li class="footer-block__list--li"><a href="">About</a></li>
-                            <li class="footer-block__list--li"><a href="">What we offer</a></li>
-                            <li class="footer-block__list--li"><a href="">Leadership</a></li>
-                            <li class="footer-block__list--li"><a href="">Careers</a></li>
+                    <div class="footer__list">
+                        <h3 class="footer__list--title">Olearn</h3>
+                        <ul class="footer__list--ul">
+                            <li class="footer__list-item"><a href="#">About</a></li>
+                            <li class="footer__list-item"><a href="#">What we offer</a></li>
+                            <li class="footer__list-item"><a href="#">Leadership</a></li>
+                            <li class="footer__list-item"><a href="#">Careers</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-block__list">
-                        <h3 class="footer-block__list--title">Olearn</h3>
-                        <ul class="footer-block__list--ul">
-                            <li class="footer-block__list--li"><a href="">About</a></li>
-                            <li class="footer-block__list--li"><a href="">What we offer</a></li>
-                            <li class="footer-block__list--li"><a href="">Leadership</a></li>
-                            <li class="footer-block__list--li"><a href="">Careers</a></li>
+                    <div class="footer__list">
+                        <h3 class="footer__list--title">Olearn</h3>
+                        <ul class="footer__list--ul">
+                            <li class="footer__list-item"><a href="#">About</a></li>
+                            <li class="footer__list-item"><a href="#">What we offer</a></li>
+                            <li class="footer__list-item"><a href="#">Leadership</a></li>
+                            <li class="footer__list-item"><a href="#">Careers</a></li>
                         </ul>
                     </div>
-                    <div class="footer-block__list">
-                        <h3 class="footer-block__list--title">Olearn</h3>
-                        <ul class="footer-block__list--ul">
-                            <li class="footer-block__list--li"><a href="">About</a></li>
-                            <li class="footer-block__list--li"><a href="">What we offer</a></li>
-                            <li class="footer-block__list--li"><a href="">Leadership</a></li>
-                            <li class="footer-block__list--li"><a href="">Careers</a></li>
+                    <div class="footer__list">
+                        <h3 class="footer__list--title">Olearn</h3>
+                        <ul class="footer__list--ul">
+                            <li class="footer__list-item"><a href="#">About</a></li>
+                            <li class="footer__list-item"><a href="#">What we offer</a></li>
+                            <li class="footer__list-item"><a href="#">Leadership</a></li>
+                            <li class="footer__list-item"><a href="#">Careers</a></li>
                         </ul>
                     </div>
-                    <div class="footer-block__list">
-                        <h3 class="footer-block__list--title">Olearn</h3>
-                        <ul class="footer-block__list--ul">
-                            <li class="footer-block__list--li"><a href="">About</a></li>
-                            <li class="footer-block__list--li"><a href="">What we offer</a></li>
-                            <li class="footer-block__list--li"><a href="">Leadership</a></li>
-                            <li class="footer-block__list--li"><a href="">Careers</a></li>
+                    <div class="footer__list">
+                        <h3 class="footer__list--title">Olearn</h3>
+                        <ul class="footer__list--ul">
+                            <li class="footer__list-item"><a href="#">About</a></li>
+                            <li class="footer__list-item"><a href="#">What we offer</a></li>
+                            <li class="footer__list-item"><a href="#">Leadership</a></li>
+                            <li class="footer__list-item"><a href="#">Careers</a></li>
                         </ul>
                     </div>
                 </div>
             </section>
-            <section class="add-info__container">
-                <div class="add-info--wrapper">
+            <section class="additional-info__container">
+                <div class="additional-info__wrapper">
 
                     <div class="logo-small-box">
-                        <img src="img/head/Logo.png" alt="Logo of the site Ziro" class="logo__img">
+                        <img src="./imgs/Logo.png" alt="Logo of the site Ziro" class="logo__img">
                         <!-- <img src="" alt="" class="logo-small-img"> -->
                     </div>
 
-                    <ul class="add-info--links">
-                        <li class="add-info--link nav__link">Terms of Use</li>
-                        <li class="add-info--link nav__link">Portfolio</li>
-                        <li class="add-info--link nav__link">Privacy policy</li>
-                        <li class="add-info--link nav__link">Contact us</li>
-                        <li class="add-info--link nav__link">FAQ</li>
+                    <ul class="additional-info__nav-links">
+                        <li class="additional-info__link nav__link"><a href="#">Terms of Use</a></li>
+                        <li class="additional-info__link nav__link"><a href="#">Portfolio</a></li>
+                        <li class="additional-info__link nav__link"><a href="#">Privacy policy</a></li>
+                        <li class="additional-info__link nav__link"><a href="#">Contact us</a></li>
+                        <li class="additional-info__link nav__link"><a href="#">FAQ</a></li>
                     </ul>
 
-                    <div class="add-info-btns--wrapper">
-                        <button class="add-info-btn btn-facebook"><svg width="17" height="17" viewBox="0 0 13 13"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="additional-info-btns">
+                        <button class="additional-info__btn btn--facebook"><svg width="17" height="17"
+                                viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M6.49701 0.62793C3.25148 0.62793 0.619873 3.27553 0.619873 6.54079C0.619873 9.50518 2.79057 11.9531 5.61838 12.3807V8.1077H4.16424V6.55353H5.61838V5.51923C5.61838 3.807 6.44751 3.05561 7.86209 3.05561C8.53932 3.05561 8.89805 3.10633 9.06736 3.12907V4.48562H8.1026C7.50223 4.48562 7.29246 5.05871 7.29246 5.70412V6.55353H9.05221L8.81374 8.1077H7.29246V12.3929C10.161 12.0018 12.3742 9.53429 12.3742 6.54079C12.3742 3.27553 9.74278 0.62793 6.49701 0.62793Z"
                                     fill="#979797" />
                             </svg>
                         </button>
-                        <button class="add-info-btn btn-instagram"><svg width="17" height="17" viewBox="0 0 11 11"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button class="additional-info__btn btn--instagram"><svg width="17" height="17"
+                                viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M2.98771 0.412109C1.34984 0.412109 0.0171509 1.7468 0.0171509 3.38657V7.63478C0.0171509 9.27435 1.35062 10.6084 2.9889 10.6084H7.23324C8.87132 10.6084 10.2042 9.27376 10.2042 7.63399V3.38538C10.2042 1.74601 8.87072 0.412109 7.23244 0.412109H2.98771ZM8.16679 2.04352C8.39172 2.04352 8.57427 2.22624 8.57427 2.45138C8.57427 2.67651 8.39172 2.85923 8.16679 2.85923C7.94186 2.85923 7.75931 2.67651 7.75931 2.45138C7.75931 2.22624 7.94186 2.04352 8.16679 2.04352ZM5.11067 2.85923C6.5715 2.85923 7.75931 4.04812 7.75931 5.51028C7.75931 6.97243 6.57129 8.16133 5.11067 8.16133C3.64985 8.16133 2.46204 6.97223 2.46204 5.51028C2.46204 4.04833 3.64985 2.85923 5.11067 2.85923ZM5.11067 3.67494C4.09788 3.67494 3.27701 4.49656 3.27701 5.51028C3.27701 6.524 4.09788 7.34562 5.11067 7.34562C6.12347 7.34562 6.94434 6.524 6.94434 5.51028C6.94434 4.49656 6.12347 3.67494 5.11067 3.67494Z"
                                     fill="#979797" />
                             </svg>
                         </button>
-                        <button class="add-info-btn btn-twitter">
+                        <button class="additional-info__btn btn--twitter">
                             <svg width="17" height="13" viewBox="0 0 15 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -746,7 +729,7 @@
                                     fill="#979797" />
                             </svg>
                         </button>
-                        <button class="add-info-btn btn-youtube">
+                        <button class="additional-info__btn btn--youtube">
                             <svg width="23" height="18" viewBox="0 0 16 11" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path

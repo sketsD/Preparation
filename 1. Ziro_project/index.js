@@ -1,16 +1,14 @@
 "use strict";
 
-const howitworksContainer = document.querySelector(
-  ".how-it-works-block__items"
-);
-const howitworksTabs = document.querySelectorAll(".how-it-works-block__item");
+const howitworksContainer = document.querySelector(".how-it-works__items");
+const howitworksTabs = document.querySelectorAll(".how-it-works__item");
 // const activetabs = document.querySelectorAll(".how-it-works-block__item--text");
 
 console.log(howitworksContainer);
 
 howitworksContainer.addEventListener("click", (e) => {
   e.preventDefault();
-  const clicked = e.target.closest(".how-it-works-block__item");
+  const clicked = e.target.closest(".how-it-works__item");
   if (!clicked) return;
   howitworksTabs.forEach((item) => {
     item === clicked
@@ -23,16 +21,14 @@ howitworksContainer.addEventListener("click", (e) => {
 // Slider________________________________________________________________
 
 const slides = document.querySelectorAll(".slide");
-console.log(slides);
 const slider = document.querySelector(".slider");
-console.log(slider);
 
 slides.forEach(
   (slide, index) => (slide.style.transform = `translateX(${index * 100}%)`)
 );
 
-const btnRight = document.querySelector(".slider__btn--right");
-const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".customers-navigation-right");
+const btnLeft = document.querySelector(".customers-navigation-left");
 let activeSlide = 0;
 const lenghtOfSlider = slides.length;
 
