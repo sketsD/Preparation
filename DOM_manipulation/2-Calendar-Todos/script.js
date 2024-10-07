@@ -28,110 +28,6 @@ const updateWeekDaysSize = function () {
   });
 };
 
-// let data = [
-//   {
-//     "2024/7/30": [
-//       {
-//         id: 62306,
-//         title: "Birthday",
-//         todos: "Feel good",
-//         done: false,
-//       },
-//     ],
-//   },
-//   {
-//     "2024/8/24": [
-//       {
-//         id: 56472,
-//         title: "Take Bobby",
-//         todos: "Feel good kdkdkd",
-//         done: true,
-//       },
-//     ],
-//   },
-//   {
-//     "2024/8/28": [
-//       {
-//         id: 95921,
-//         title: "Birthday 2024 25",
-//         todos: "Feel good",
-//         done: false,
-//       },
-//       {
-//         id: 91198,
-//         title: "Go to the clinic",
-//         todos: "Be strong",
-//         done: false,
-//       },
-//     ],
-//   },
-//   {
-//     "2024/8/14": [
-//       {
-//         id: 91504,
-//         title: "Birthday 2024 25",
-//         todos: "Feel good",
-//         done: false,
-//       },
-//       {
-//         id: 95078,
-//         title: "Go to the clinic",
-//         todos: "Be strong",
-//         done: false,
-//       },
-//       {
-//         id: 95690,
-//         title: "Birthday 2024 25",
-//         todos: "Feel good",
-//         done: false,
-//       },
-//       {
-//         id: 94508,
-//         title: "Go to the clinic",
-//         todos: "Be strong",
-//         done: false,
-//       },
-//       {
-//         id: 63789,
-//         title: "Mother's Birthday",
-//         todos: "Buy a gift",
-//         done: true,
-//       },
-//     ],
-//   },
-//   {
-//     "2024/8/30": [
-//       {
-//         id: 62490,
-//         title: "Mother's Birthday",
-//         todos:
-//           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente obcaecati beatae, quod suscipit enim deleniti? Hic eaque labore aperiam minus, molestiae perferendis animi perspiciatis odio, fugit id quos sequi quidem!",
-//         done: true,
-//       },
-//     ],
-//   },
-//   {
-//     "2024/9/10": [
-//       {
-//         id: 60446,
-//         title: "Mother's Birthday",
-//         todos: "Buy a gift",
-//         done: true,
-//       },
-//     ],
-//   },
-//   {
-//     "2024/9/1": [
-//       {
-//         id: 49494,
-//         title: "Mother's Birthday",
-//         todos: "Buy a gift",
-//         done: true,
-//       },
-//     ],
-//   },
-// ];
-
 let yearChange = 0;
 let monthChange = 0;
 let dayChange = 0;
@@ -139,47 +35,65 @@ let clicked = null;
 let id = null;
 let sortedTodos = null;
 
-let data = localStorage.getItem("events")
-  ? JSON.parse(localStorage.getItem("events"))
-  : [];
+const getStoredData = () => JSON.parse(localStorage.getItem("events") || "[]");
+let data = getStoredData();
 
-const calendar = document.querySelector(".calendar-body--days-container");
-const toDosContainer = document.querySelector(
-  ".task-container__to-scroll--box"
-);
+const updateStoredData = (newData) => {
+  localStorage.setItem("events", JSON.stringify(newData));
+};
+
+const domElements = {
+  calendar: document.querySelector(".calendar-body--days-container"),
+  toDosContainer: document.querySelector(".task-container__to-scroll--box"),
+  btnOpenForm: document.querySelector(".add-new-event"),
+  formAddEvent: document.querySelector(".task-add-form__container"),
+  titleNewTodo: document.querySelector(".name-event--input"),
+  bodyNewTodo: document.querySelector(".description-event--textarea"),
+  hiddenDone: document.querySelector(".hidden-done--input"),
+};
+
+const {
+  calendar,
+  toDosContainer,
+  btnOpenForm,
+  formAddEvent,
+  titleNewTodo,
+  bodyNewTodo,
+  hiddenDone,
+} = domElements;
+
 const toDos = document.querySelectorAll(".tasks-container_todo");
-const btnOpenForm = document.querySelector(".add-new-event");
 const addNewTask = document.querySelector(".task-add-form__container");
 const buttonToAdd = document.querySelector(".add-new-event");
 const buttonCloseForm = document.querySelector(".close-btn");
-
 const todosSelectedDay = document.querySelector(".tasks-main__plans-to-do");
-
-const formAddEvent = document.querySelector(".task-add-form__container");
-const titleNewTodo = document.querySelector(".name-event--input");
-const bodyNewTodo = document.querySelector(".description-event--textarea");
 
 const buttonsSort = document.querySelector(".todo-sort-buttons");
 const btnSorted = document.querySelector(".sort-btn");
 const btnDefault = document.querySelector(".default-btn ");
-const hiddenDone = document.querySelector(".hidden-done--input");
 
 const openForm = function () {
-  toDos.forEach((todo) => todo.classList.add("hidden"));
-  // debugger;
+  toggleVisibility(toDos, true);
   addNewTask.classList.add("active");
   buttonToAdd.classList.remove("active");
-  // dayCalendar.removeEventListener("click", callForm);
 };
 
 const closeForm = function () {
-  toDos.forEach((todo) => todo.classList.remove("hidden"));
+  toggleVisibility(toDos, false);
   addNewTask.classList.remove("active");
   buttonToAdd.classList.add("active");
-  id = null;
+  resetFormFields();
+};
+
+const toggleVisibility = (elements, isHidden) => {
+  elements.forEach((el) => el.classList.toggle("hidden", isHidden));
+};
+
+const resetFormFields = () => {
   titleNewTodo.value = "";
   bodyNewTodo.value = "";
   hiddenDone.value = "false";
+  id = null;
 };
 
 const isEvent = function (date) {
@@ -257,7 +171,8 @@ const createTodo = function (date, title = "", todos = "", idDone = false) {
         },
       ],
     });
-    localStorage.setItem("events", JSON.stringify(data));
+    updateStoredData(data);
+
     return;
   }
   if (isTodo) {
@@ -272,7 +187,8 @@ const createTodo = function (date, title = "", todos = "", idDone = false) {
           });
         }
       });
-      localStorage.setItem("events", JSON.stringify(data));
+      updateStoredData(data);
+
       id = null;
       return;
     }
@@ -282,7 +198,7 @@ const createTodo = function (date, title = "", todos = "", idDone = false) {
       todos,
       done: idDone,
     });
-    localStorage.setItem("events", JSON.stringify(data));
+    updateStoredData(data);
     return;
   }
 };
@@ -290,20 +206,14 @@ const createTodo = function (date, title = "", todos = "", idDone = false) {
 const checkTodo = function (date, currentID) {
   let isTodo = findTodoByDate(date);
   isTodo[date] = isTodo[date].map((dayEvent) =>
-    dayEvent.id === currentID
-      ? { ...dayEvent, done: !dayEvent.done }
-      : { ...dayEvent }
+    dayEvent.id === currentID ? { ...dayEvent, done: !dayEvent.done } : dayEvent
   );
-  localStorage.setItem("events", JSON.stringify(data));
-  // console.log(data);
-  console.log(currentID);
-  console.log(id);
+  updateStoredData(data);
   id = null;
 };
 
 const deleteTodo = function (date, currentID) {
   let isTodo = findTodoByDate(date);
-  console.log(isTodo[date].length);
   if (isTodo[date].length === 1) {
     data = data.filter((el) => el[date] === isTodo.date);
   } else {
@@ -311,14 +221,13 @@ const deleteTodo = function (date, currentID) {
       (dayEvent) => dayEvent.id !== currentID && { ...dayEvent }
     );
   }
-  localStorage.setItem("events", JSON.stringify(data));
+  updateStoredData(data);
   id = null;
 };
 
 const editTodo = function (currentID) {
   const thisTodo = findTodoByID(currentID, clicked);
   openForm();
-
   setDataToForm(thisTodo.title, thisTodo.todos, thisTodo.done);
   id = currentID;
 };
@@ -360,10 +269,7 @@ const updateTodos = function (form, date) {
     btn.addEventListener("click", (e) => {
       if (!e.target.closest(".tasks-container_todo")) return;
       id = Number(e.target.closest(".tasks-container_todo").dataset.id);
-      console.log("edit " + id);
       e.target.closest(".tasks-container_todo").classList.toggle("active");
-      // setDoneTodo(id);
-
       checkTodo(clicked, id);
       sortedTodos && sortTodo();
     })
@@ -454,13 +360,9 @@ const addNewEvent = function (e) {
   if (!getDataFromForm()) return;
   const [titleEvent, todo, done] = getDataFromForm();
   createTodo(clicked, titleEvent, todo, done);
-  // titleNewTodo.value = "";
-  // bodyNewTodo.value = "";
-  // done.value = "false";
   let isSorted = sortedTodos;
   load();
   sortedTodos = isSorted;
-  // sortedTodos && btnSorted.addEventListener(".active");
   sortedTodos && sortTodo();
   closeForm();
 };
@@ -516,7 +418,6 @@ const sortTodoToggle = function (e) {
   btn.classList.contains("up") && btn.classList.contains("down")
     ? btn.classList.remove("down")
     : btn.classList.add("down");
-
   sortedTodos = true;
   sortTodo();
 };
@@ -613,7 +514,7 @@ const load = function () {
         );
       } else if (currentDaysOfMonth === day && currentMonth === month) {
         // currentDaysOfMonth which is done by the logic of icreased or decreased date depend on the day
-        // and the month avoid dublicating of the selected days
+        // and the month to avoid duplicating of the selected days
         calendar.insertAdjacentHTML(
           "beforeend",
           dayHTML(currentDaysOfMonth, "selected", isEvent(thisDate))
@@ -640,12 +541,6 @@ const load = function () {
           true,
           `${currentYear}/${currentMonth}/${currentDaysOfMonth}`
         );
-        // } else if (
-        //   dayCalendar.classList.contains("active") &&
-        //   !dayCalendar.classList.contains("event")
-        // ) {
-        //   console.log("depth");
-        //   update(date, true, false);
       } else if (
         (dayCalendar.classList.contains("selected") ||
           (dayCalendar.classList.contains("active") && dayChange === 0)) &&
