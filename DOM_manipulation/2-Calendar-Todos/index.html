@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script async defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="popup-greeting" style="display: none;">
+            <label for="username" class="popup-name">Hi there! Pls, enter your name to start</label>
+            <input type="text" name="username" class="popup-name--input" maxlength="25">
+        </div>
+        <div class="main__container">
+            <div class="calendar-main__left-part main_section main_left">
+                <div class="calendar-body">
+                    <div class="calendar-body--navigation navigation">
+                        <button class="calendar-body--btn btn-left prev-month btn-navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>&ensp;&ensp;&ensp;Previous month</button>
+                        <h2 class="calendar-body-month current-month"></h2>
+                        <button class="calendar-body--btn btn-right next-month btn-navigation">
+                            Next month &ensp;&ensp;&ensp;<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="calendar-body--weekdays">
+                        <li class="calendar-body-weekday"></li>
+                        <li class="calendar-body-weekday"></li>
+                        <li class="calendar-body-weekday"></li>
+                        <li class="calendar-body-weekday"></li>
+                        <li class="calendar-body-weekday"></li>
+                        <li class="calendar-body-weekday"></li>
+                        <li class="calendar-body-weekday"></li>
+                    </ul>
+
+                    <div class="calendar-body--days-container grid--container">
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-main__right-part main_section main_right">
+                <div class="tasks-body">
+                    <!-- active -->
+                    <button class="add-new-event active"><svg class="add-new btn-small"
+                            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                        </svg>&ensp;&ensp;Add new event
+                    </button>
+                    <div class="tasks-main--navigation navigation">
+
+                        <button class="plans-to-do--btn btn-left prev-day btn-navigation"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>Prev day</button>
+                        <h2 class="plans-to-do--date current-date"></h2>
+                        <button class="plans-to-do--btn btn-right next-day btn-navigation">Next day<svg
+                                xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg></button>
+                    </div>
+                    <div class="tasks-main__plans--block">
+
+                        <h2 class="tasks-main__plans-to-do">Today you have 2 plan:</h2>
+                        <div class="todo-sort-buttons">
+                            <button class="todo-sort-buttons-default default-btn btn-small"><svg class="default"
+                                    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                                    <path fill-rule="evenodd"
+                                        d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                                </svg></button>
+                            <button class="todo-sort-buttons-default sort-btn up btn-small"><svg class="sorted"
+                                    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5" />
+                                </svg></button>
+                        </div>
+                    </div>
+                    <div class="tasks-container_to-scroll">
+                        <!-- active -->
+                        <form class="task-add-form__container ">
+                            <label for="name-event" class="name-event--label">Name of the event</label>
+                            <input type="text" name="name-event" id="name-event" class="name-event--input" required>
+                            <label for="description-event" class="description-event--label">Add things to do</label>
+                            <textarea name="description-event" id="description-event"
+                                class="description-event--textarea" required></textarea>
+                            <div class="bts-box">
+                                <input type="submit" value="Save" class="submit-btn sqr-btn">
+                                <input type="reset" value="Clear" class="reset-btn sqr-btn">
+                                <button type="button" class="close-btn sqr-btn">Close</button>
+                            </div>
+                            <input type="hidden" value="false" name="hidden-done" id="hidden-done"
+                                class="hidden-done--input">
+                        </form>
+                        <div class="task-container__to-scroll--box">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
