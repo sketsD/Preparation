@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        .error {
+            color: rgb(255, 95, 95);
+            font-size: 0.9em;
+            display: none;
+        }
+
+        .hint {
+            color: rgb(157, 157, 255);
+            font-size: 0.8em;
+            display: none;
+        }
+
+        input:focus {
+            outline: 2px solid #a5a5a5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign up</h1>
+    <form id="registrationForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <span class="error" id="nameError">Name should have at least 2 characters</span>
+        <span class="hint" id="nameHint">Enter your full name</span><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <span class="error" id="emailError">Pls, fill in valid e-mail address</span>
+        <span class="hint" id="emailHint">e.g: example@gmail.com</span><br><br>
+
+        <label for="password">password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <span class="error" id="passwordError">Password should have at least 6 characters</span>
+        <span class="hint" id="passwordHint">Use at least one number and 1 symbol</span><br><br>
+
+        <button type="submit">Sign up</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
