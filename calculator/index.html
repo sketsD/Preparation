@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Бюджету</title>
+</head>
+
+<body>
+    <h1>Калькулятор Бюджету</h1>
+
+    <form id="entryForm">
+        <input type="number" id="amount" placeholder="Сума" required>
+        <input type="text" id="category" placeholder="Категорія" required>
+        <input type="date" id="date" required>
+        <select id="type" required>
+            <option value="income">Дохід</option>
+            <option value="expense">Витрата</option>
+        </select>
+        <button type="submit">Додати запис</button>
+    </form>
+
+    <h2>Ваші записи:</h2>
+    <ul id="entryList"></ul>
+
+    <h2>Загальний баланс: <span id="balance">0</span> грн</h2>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
