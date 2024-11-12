@@ -1,0 +1,110 @@
+:root {
+  /* --bg-color: #fbf9f1; */
+  --border-color: #4e4e4e;
+  --text-main-light: rgb(248, 240, 250);
+  --text-main-dark: rgba(0, 0, 0);
+
+  --color-main: rgb(243, 243, 243);
+  --color-bg-1: rgb(120, 122, 255);
+  --color-bg-2: rgb(255, 170, 170);
+  --color-bg-3: rgb(255, 119, 119);
+
+  --todo-main: rgba(240, 240, 255, 0.9);
+  --todo-bg-1: rgba(240, 240, 255, 0.7);
+
+  --day-active-bg: rgba(240, 240, 255);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: 2rem;
+}
+
+html,
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 62.5%;
+  height: 100%;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65vw;
+  height: 70vh;
+  /* background-color: antiquewhite; */
+  display: flex;
+  font-size: 2rem;
+}
+.users,
+.chat {
+  display: flex;
+  flex-direction: column;
+}
+.users {
+  flex: 1 1 30%;
+}
+.chat {
+  flex: 1 1 70%;
+  height: 100%;
+}
+.disconnect-btn {
+  margin-top: 1rem;
+}
+
+.scroll-window {
+  margin: 2rem;
+  flex: 1 1 85%;
+  overflow: auto;
+  border: solid 1px black;
+  li {
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+}
+.scroll-window::-webkit-scrollbar {
+  display: none;
+}
+.textarea-window {
+  flex: 1 0 15%;
+  margin: 2rem;
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  textarea {
+    width: 100%;
+    height: 100%;
+  }
+}

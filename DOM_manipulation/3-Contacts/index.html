@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script async defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="contact-list">
+                <form action="" class="contact-search">
+                    <input type="search" placeholder="Start typing name or phone number" class="contact-search-input">
+                    <input type="submit" value="Search" class="contact-submit-input btn-primary">
+                </form>
+                <div class="results-box">
+                    <button type="button" class="contact-close btn-big hidden">Clear search reuslts</button>
+                    <div class="message-box" style="display: flex; flex-direction: column; align-items: center;">
+                    </div>
+                </div>
+                <div class="contacts">
+
+                    <ul class="contacts--favorite">
+                        <!-- <li class="contact__box">
+                            <div class="contact__box--photo"><img src="./imgs/default-avatar-icon.jpg"
+                                    alt="contact avatar" class="photo"></div>
+                            <div class="contact__box--info">
+                                <h3 class="contact-fullname">Vitalik</h3>
+                                <p class="contact-email--label">E-mail:&nbsp;&nbsp;
+                                    <a href="mailto:..." class="contact-email--link">Dkdk@gmail.com</a>
+                                </p>
+                                <p class="contact-phone--label">Phone number:&nbsp;&nbsp;
+                                    <a href="mailto:..." class="contact-phone--link">+38019919191</a>
+                                </p>
+                            </div>
+                            <div class="contact__box--buttons">
+                                <button class="small-btn favorite-button active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-star" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <ul class="contacts--main">
+                        <!-- <li class="contact__box">
+                            <div class="contact__box--photo"><img src="./imgs/default-avatar-icon.jpg"
+                                    alt="contact avatar" class="photo"></div>
+                            <div class="contact__box--info">
+                                <h3 class="contact-fullname">Vitalik</h3>
+                                <p class="contact-email--label">E-mail:&nbsp;&nbsp;
+                                    <a href="mailto:..." class="contact-email--link">Dkdk@gmail.com</a>
+                                </p>
+                                <p class="contact-phone--label">Phone number:&nbsp;&nbsp;
+                                    <a href="mailto:..." class="contact-phone--link">+38019919191</a>
+                                </p>
+                            </div>
+                            <div class="contact__box--buttons">
+                                <button class="small-btn favorite-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-star" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li> -->
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="form-container">
+
+                <div class="form-render">
+
+                    <div class="header-box">
+                        <h2 class="form-header"><span class="form-header--highlight label-primary">Your</span> contact
+                        </h2>
+                    </div>
+                    <form action="" class="contact-form">
+                        <div class="contact-image-container">
+
+                            <img src="./imgs/default-avatar-icon.jpg" alt="" class="contact-photo">
+
+                            <div class="contact-image-input">
+                                <label for="contact-photo" class="contact-photo-label">Contact photo URL</label>
+                                <input type="url" name="contact-photo" id="contact-photo" class="contact-photo-input">
+                            </div>
+                        </div>
+
+                        <label for="contact-name" class="contact-name">Contact name </label>
+                        <input type="text" name="contact-name" id="contact-name" class="contact-name-input">
+                        <label for="contact-surname" class="contact-surname">Contact surname </label>
+                        <input type="text" name="contact-surname" id="contact-surname" class="contact-surname-input">
+
+                        <label for="contact-tel" class="contact-tel">Contact number </label>
+                        <input type="tel" id="contact-tel" name="contact-tel" class="contact-tel-input" required>
+                        <label for="contact-email" class="contact-email">Contact E-mail </label>
+                        <input type="email" id="contact-email" name="contact-email" class="contact-email-input">
+                        <input type="hidden" id="cotact-isFavorite" name="cotact-isFavorite" class="cotact-isFavorite">
+                        <button type="submit" class="contact-submit btn-big">Save</button>
+                        <button type="button" class="contact-cancel btn-big">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
