@@ -1,0 +1,16 @@
+{
+  "cities": [
+    {
+      "id": "ef70",
+      "cityName": "Kyiv",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2024-11-12T13:20:15.078Z",
+      "notes": "The best place ever",
+      "position": {
+        "lat": "50.387507803003146",
+        "lng": "30.541992187500004"
+      }
+    }
+  ]
+}
